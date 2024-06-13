@@ -1,0 +1,6 @@
+[package]
+name = "bazel_rust_cross"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

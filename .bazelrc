@@ -1,0 +1,2 @@
+# Workaround to exclude local paths for linkage in build from https://github.com/bazelbuild/bazel/issues/10472#issuecomment-678528743
+build --sandbox_block_path=/usr/local
