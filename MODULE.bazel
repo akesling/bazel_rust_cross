@@ -3,7 +3,7 @@ module(
     repo_name = "bazel_rust_cross",
 )
 
-bazel_dep(name="platforms", version="0.0.8")
+bazel_dep(name="platforms", version="0.0.9")
 
 ################################################################################
 # Bazel Utilities ##############################################################
@@ -48,3 +48,9 @@ crate_index.spec(package = "tokio", version = "1", features = ["full", "tracing"
 
 crate_index.from_specs(name = "crate_index")
 use_repo(crate_index, "crate_index")
+
+#################################################################################
+## Cross-Compiling CC Toolchain #################################################
+#################################################################################
+
+bazel_dep(name = "toolchains_musl", version = "0.1.16", dev_dependency = True)
